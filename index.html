@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>🇪🇸 西班牙亲子游完整行程与预算报告 2026.7.4-12</title>
+<style>
+  :root {
+    --primary: #c8102e;       /* 西班牙红 */
+    --secondary: #ffc400;      /* 西班牙黄 */
+    --dark: #1a1a2e;
+    --text: #2d2d2d;
+    --bg: #faf9f7;
+    --card: #ffffff;
+    --border: #e0dcd4;
+    --accent: #e8a838;
+    --salmon: #FF8C69;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    font-size: 16px;
+  }
+
+  /* Header */
+  .hero {
+    background: linear-gradient(135deg, #1a1a2e 0%, #c8102e 50%, #ffc400 100%);
+    color: white;
+    padding: 60px 24px 50px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: '🇪🇸';
+    font-size: 80px;
+    display: block;
+    margin-bottom: 16px;
+  }
+  .hero h1 {
+    font-size: 28px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+  }
+  .hero .subtitle {
+    font-size: 15px;
+    opacity: 0.9;
+    margin-bottom: 20px;
+  }
+  .hero .badges {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+  }
+  .badge {
+    background: rgba(255,255,255,0.15);
+    border: 1px solid rgba(255,255,255,0.3);
+    border-radius: 20px;
+    padding: 5px 14px;
+    font-size: 13px;
+    backdrop-filter: blur(4px);
+  }
+
+  /* Nav */
+  .nav {
+    background: var(--dark);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    gap: 0;
+    overflow-x: auto;
+  }
+  .nav a {
+    color: rgba(255,255,255,0.7);
+    text-decoration: none;
+    padding: 14px 20px;
+    font-size: 14px;
+    white-space: nowrap;
+    border-bottom: 3px solid transparent;
+    transition: all 0.2s;
+  }
+  .nav a:hover, .nav a.active {
+    color: var(--secondary);
+    border-bottom-color: var(--secondary);
+  }
+
+  /* Main */
+  .container {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 32px 20px 60px;
+  }
+
+  /* Section */
+  .section {
+    background: var(--card);
+    border-radius: 16px;
+    padding: 28px;
+    margin-bottom: 24px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    border: 1px solid var(--border);
+  }
+  .section-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--primary);
+    margin-bottom: 18px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--secondary);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  /* Alert */
+  .alert {
+    background: #fff3cd;
+    border: 1px solid #ffc107;
+    border-left: 4px solid #ffc107;
+    border-radius: 8px;
+    padding: 14px 18px;
+    margin-bottom: 24px;
+    font-size: 14px;
+  }
+  .alert-danger {
+    background: #fde8e8;
+    border-color: #c8102e;
+    border-left-color: #c8102e;
+  }
+  .alert-success {
+    background: #e8f5e9;
+    border-color: #4caf50;
+    border-left-color: #4caf50;
+  }
+
+  /* Day cards */
+  .day-card {
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    margin-bottom: 16px;
+    overflow: hidden;
+  }
+  .day-header {
+    background: var(--dark);
+    color: white;
+    padding: 12px 18px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+  }
+  .day-header .day-num {
+    font-weight: 700;
+    color: var(--secondary);
+    font-size: 15px;
+  }
+  .day-body {
+    padding: 16px 18px;
+    background: var(--card);
+  }
+  .day-body table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+  }
+  .day-body table th {
+    text-align: left;
+    color: var(--primary);
+    padding: 4px 8px 4px 0;
+    font-size: 12px;
+    width: 80px;
+  }
+  .day-body table td {
+    padding: 4px 8px 4px 0;
+    vertical-align: top;
+  }
+  .highlight {
+    background: linear-gradient(120deg, #ffeaa7 0%, #ffeaa7 100%);
+    background-size: 100% 40%;
+    background-repeat: no-repeat;
+    background-position: 0 90%;
+    font-weight: 600;
+  }
+  .danger-text { color: #c8102e; font-weight: 600; }
+
+  /* Budget table */
+  .budget-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+  }
+  .budget-table th {
+    background: var(--dark);
+    color: white;
+    padding: 10px 14px;
+    text-align: left;
+  }
+  .budget-table td {
+    padding: 10px 14px;
+    border-bottom: 1px solid var(--border);
+  }
+  .budget-table tr:nth-child(even) td { background: #faf9f7; }
+  .budget-total {
+    background: var(--primary) !important;
+    color: white;
+    font-weight: 700;
+    font-size: 16px;
+  }
+
+  /* Checklist */
+  .checklist {
+    list-style: none;
+  }
+  .checklist li {
+    padding: 8px 0;
+    border-bottom: 1px solid var(--border);
+    font-size: 14px;
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  .checklist li::before {
+    content: '☐';
+    font-size: 16px;
+    flex-shrink: 0;
+    margin-top: 1px;
+  }
+  .checklist li.urgent {
+    color: #c8102e;
+    font-weight: 600;
+  }
+  .checklist li.urgent::before { content: '🔴'; }
+
+  /* Ticket table */
+  .ticket-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+    margin-top: 12px;
+  }
+  .ticket-table th {
+    background: var(--dark);
+    color: white;
+    padding: 8px 12px;
+    text-align: left;
+  }
+  .ticket-table td {
+    padding: 8px 12px;
+    border-bottom: 1px solid var(--border);
+  }
+  .ticket-table tr:nth-child(even) td { background: #faf9f7; }
+
+  /* Safety */
+  .safety-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 16px;
+  }
+  .safety-card {
+    border-radius: 10px;
+    padding: 16px;
+    font-size: 14px;
+  }
+  .safety-card.red { background: #fde8e8; border: 1px solid #f5c6c6; }
+  .safety-card.yellow { background: #fff8e1; border: 1px solid #ffe082; }
+  .safety-card.green { background: #e8f5e9; border: 1px solid #a5d6a7; }
+  .safety-card h4 { margin-bottom: 8px; font-size: 14px; }
+  .safety-card ul { padding-left: 16px; }
+  .safety-card li { margin-bottom: 4px; }
+
+  /* Hotel table */
+  .hotel-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+  }
+  .hotel-table th {
+    background: var(--dark);
+    color: white;
+    padding: 10px 14px;
+    text-align: left;
+  }
+  .hotel-table td {
+    padding: 10px 14px;
+    border-bottom: 1px solid var(--border);
+  }
+  .hotel-table tr:nth-child(even) td { background: #faf9f7; }
+
+  /* Footer */
+  footer {
+    background: var(--dark);
+    color: rgba(255,255,255,0.5);
+    text-align: center;
+    padding: 24px;
+    font-size: 13px;
+  }
+
+  /* Responsive */
+  @media (max-width: 600px) {
+    .hero h1 { font-size: 22px; }
+    .section { padding: 20px 16px; }
+    .day-body { padding: 12px 14px; }
+    .day-body table th { width: 60px; }
+    .nav a { padding: 12px 14px; font-size: 13px; }
+  }
+
+  /* Smooth scroll */
+  html { scroll-behavior: smooth; }
+
+  /* Print */
+  @media print {
+    .nav { display: none; }
+    .hero { padding: 30px 20px; }
+    .section { break-inside: avoid; }
+  }
+</style>
+</head>
+<body>
+
+<!-- Hero -->
+<div class="hero">
+  <h1>西班牙亲子游</h1>
+  <p class="subtitle">2026年7月4日 - 7月12日 · 9天8晚 · 2大人 + 1小孩（11岁）</p>
+  <div class="badges">
+    <span class="badge">🍊 苏州出发</span>
+    <span class="badge">✈️ 上海浦东</span>
+    <span class="badge">🚄 高铁AVE</span>
+    <span class="badge">💰 中配预算 ¥60,750</span>
+  </div>
+</div>
+
+<!-- Nav -->
+<div class="nav">
+  <a href="#overview">行程总览</a>
+  <a href="#daily">每日行程</a>
+  <a href="#hotel">住宿方案</a>
+  <a href="#budget">预算</a>
+  <a href="#safety">安全提示</a>
+  <a href="#checklist">出发Checklist</a>
+</div>
+
+<div class="container">
+
+<!-- Alert -->
+<div class="alert alert-danger" id="overview">
+  <strong>⚠️ 重要修正：</strong>原行程存在交通时间错误——巴塞罗那→塞维利亚火车需5.5-6小时（非2.5小时），已改为<strong>航班1.5小时</strong>。格拉纳达返回统一改为<strong>马德里返程</strong>。
+</div>
+
+<!-- Route Overview -->
+<div class="section">
+  <div class="section-title">🗺️ 路线总览</div>
+  <div style="background:#1a1a2e;color:#ffc400;border-radius:12px;padding:20px;font-family:monospace;font-size:13px;line-height:2;overflow-x:auto;">
+Day1：上海 → 马德里（抵达）<br>
+Day2：马德里（普拉多+王宫）<br>
+Day3：马德里（托莱多一日游）<br>
+Day4：马德里 → 巴塞罗那（高铁2.5h）<br>
+Day5：巴塞罗那（圣家堂+高迪三件套）<br>
+Day6：巴塞罗那（奎尔公园+海滩）<br>
+Day7：巴塞罗那 → 塞维利亚（航班1.5h）<br>
+Day8：塞维利亚 → 格拉纳达（大巴3h）<br>
+Day9：格拉纳达 → 马德里 → 上海（返程）
+  </div>
+</div>
+
+<!-- Daily -->
+<div class="section" id="daily">
+  <div class="section-title">📅 每日行程</div>
+
+  <div class="day-card">
+    <div class="day-header"><span class="day-num">Day 1 · 7月4日（周六）</span><span>抵达马德里</span></div>
+    <div class="day-body">
+      <table>
+        <tr><th>上午</th><td>从苏州出发前往上海浦东机场</td></tr>
+        <tr><th>下午</th><td>卡塔尔航空 QR891 上海 → 多哈（约9小时）</td></tr>
+        <tr><th>晚上</th><td>QR101 多哈 → 马德里（约6.5小时）</td></tr>
+        <tr><th>深夜</th><td>抵达马德里巴拉哈斯机场（MAD），入住 Gran Vía 附近酒店</td></tr>
+      </table>
+    </div>
+  </div>
+
+  <div class="day-card">
+    <div class="day-header"><span class="day-num">Day 2 · 7月5日（周日）</span><span>马德里 · 艺术日</span></div>
+    <div class="day-body">
+      <table>
+        <tr><th>09:00-12:00</th><td><span class="highlight">普拉多美术馆</span> — 提前官网预约，周日15:00前免费</td></tr>
+        <tr><th>12:00-14:00</th><td>午餐（Tapas）</td></tr>
+        <tr><th>14:00-17:00</th><td><span class="highlight">马德里王宫</span> — 语音导览建议购买</td></tr>
+        <tr><th>17:00-19:00</th><td><span class="highlight">Retiro 公园</span> — 水晶宫+划船，孩子超爱</td></tr>
+      </table>
+      <p style="margin-top:10px;font-size:13px;color:#666;">🎫 门票：普拉多（周日免费）+ 王宫（2大1小约€30）</p>
+    </div>
+  </div>
+
+  <div class="day-card">
+    <div class="day-header"><span class="day-num">Day 3 · 7月6日（周一）</span><span>马德里 · 托莱多古城</span></div>
+    <div class="day-body">
+      <table>
+        <tr><th>09:00-10:00</th><td>AVE高铁前往<span class="highlight">托莱多</span>（约30分钟）</td></tr>
+        <tr><th>10:00-16:00</th><td>托莱多古城深度游：大教堂（€11）+ 阿尔卡萨堡（€8）</td></tr>
+        <tr><th>16:00-17:00</th><td>返回马德里，下午休整</td></tr>
+        <tr><th>晚上</th><td>Gran Vía 散步，西班牙火腿+桑格利亚</td></tr>
+      </table>
+    </div>
+  </div>
+
+  <div class="day-card">
+    <div class="day-header"><span class="day-num">Day 4 · 7月7日（周二）</span><span>马德里 → 巴塞罗那</span></div>
+    <div class="day-body">
+      <table>
+        <tr><th>08:00-10:30</th><td><span class="highlight">高铁AVE</span> 马德里 → 巴塞罗那（2.5小时，约€60-90/人）</td></tr>
+        <tr><th>10:30-12:00</th><td>入住 Eixample 区酒店，步行可达高迪作品</td></tr>
+        <tr><th>12:00-14:00</th><td>午餐 — 推荐 La Boqueria 市场</td></tr>
+        <tr><th>14:00-17:00</th><td><span class="highlight">哥特区 + 兰布拉大道</span> — 小偷活跃区，注意防盗</td></tr>
+        <tr><th>17:00-19:00</th><td>巴塞罗那海滩日落散步</td></tr>
+      </table>
+      <p style="margin-top:10px;font-size:13px;color:#666;">🚄 高铁票：3人约€180-270（儿童半价）</p>
+    </div>
+  </div>
+
+  <div class="day-card">
+    <div class="day-header"><span class="day-num">Day 5 · 7月8日（周三）</span><span>巴塞罗那 · 高迪奇迹日</span></div>
+    <div class="day-body">
+      <table>
+        <tr><th>09:00-11:00</th><td><span class="highlight">圣家堂</span> — <span class="danger-text">必须提前官网预约！</span></td></tr>
+        <tr><th>11:00-13:00</th><td><span class="highlight">巴特罗之家</span> — 孩子超爱，VR体验推荐</td></tr>
+        <tr><th>13:00-15:00</th><td>午餐 + 午休，避开正午高温</td></tr>
+        <tr><th>15:00-18:00</th><td><span class="highlight">米拉之家</span> — 傍晚场天台，光线最好</td></tr>
+      </table>
+      <p style="margin-top:10px;font-size:13px;color:#666;">🎫 门票：圣家堂+巴特罗之家+米拉之家（3人合计约€200-250）</p>
+    </div>
+  </div>
+
+  <div class="day-card">
+    <div class="day-header"><span class="day-num">Day 6 · 7月9日（周四）</span><span>巴塞罗那 · 亲子欢乐日</span></div>
+    <div class="day-body">
+      <table>
+        <tr><th>09:00-11:30</th><td><span class="highlight">奎尔公园</span> — 上午去不晒，免费区域拍照超美</td></tr>
+        <tr><th>11:30-13:00</th><td><span class="highlight">巧克力博物馆</span> — €8/人，孩子喜欢</td></tr>
+        <tr><th>13:00-15:00</th><td>午餐 + 午休</td></tr>
+        <tr><th>15:00-18:00</th><td>酒店泳池放松 / 室内休整（7月高温）</td></tr>
+        <tr><th>18:00-20:00</th><td>巴塞罗那海滩 — 海水温暖，玩沙戏水</td></tr>
+      </table>
+    </div>
+  </div>
+
+  <div class="day-card">
+    <div class="day-header"><span class="day-num">Day 7 · 7月10日（周五）</span><span>巴塞罗那 → 塞维利亚</span></div>
+    <div class="day-body">
+      <table>
+        <tr><th>07:00-08:00</th><td>酒店出发前往巴塞罗那机场</td></tr>
+        <tr><th>09:00-10:30</th><td><span class="highlight">伏林航空</span> 巴塞罗那 → 塞维利亚（飞行1.5小时，约€30-60/人）</td></tr>
+        <tr><th>10:30-12:00</th><td>入住塞维利亚老城酒店</td></tr>
+        <tr><th>12:00-14:00</th><td>午餐 — 老城区 El Rinconcillo（百年tapas老店）</td></tr>
+        <tr><th>14:00-17:00</th><td>午休（酒店），7月正午高温避免户外</td></tr>
+        <tr><th>17:00-19:30</th><td><span class="highlight">西班牙广场</span>（傍晚最佳）— 划船€4/小时，孩子超爱</td></tr>
+      </table>
+    </div>
+  </div>
+
+  <div class="day-card">
+    <div class="day-header"><span class="day-num">Day 8 · 7月11日（周六）</span><span>塞维利亚 → 格拉纳达</span></div>
+    <div class="day-body">
+      <table>
+        <tr><th>09:00-11:00</th><td><span class="highlight">塞维利亚王宫</span> — 伊斯兰风格，提前预约</td></tr>
+        <tr><th>11:00-13:00</th><td>老城区闲逛 + 市场午餐</td></tr>
+        <tr><th>13:00-16:00</th><td>ALSA大巴前往<span class="highlight">格拉纳达</span>（约3小时，约€20-30/人）</td></tr>
+        <tr><th>16:00-18:00</th><td>入住格拉纳达酒店（推荐阿尔罕布拉宫景观）</td></tr>
+        <tr><th>18:00-20:00</th><td><span class="highlight">阿尔罕布拉宫</span>（下午场）— <span class="danger-text">必须提前预约！</span></td></tr>
+      </table>
+      <p style="margin-top:10px;font-size:13px;color:#c8102e;font-weight:600;">⚠️ 旺季门票€40-87/人，建议提前2个月官网（alhamabra.org）抢票！</p>
+    </div>
+  </div>
+
+  <div class="day-card">
+    <div class="day-header"><span class="day-num">Day 9 · 7月12日（周日）</span><span>格拉纳达 → 马德里 → 上海</span></div>
+    <div class="day-body">
+      <table>
+        <tr><th>08:00-10:00</th><td><span class="highlight">阿尔罕布拉宫</span>（上午，趁凉快）— 可选二次入宫票</td></tr>
+        <tr><th>10:00-12:00</th><td>格拉纳达老城（阿尔拜辛区）闲逛</td></tr>
+        <tr><th>12:00-15:00</th><td>大巴/火车前往马德里（约4小时）或格拉纳达直飞航班</td></tr>
+        <tr><th>15:00-18:00</th><td>马德里机场 T4，提前3小时到达</td></tr>
+        <tr><th>19:00-20:00</th><td>卡塔尔航空 QR142 马德里 → 多哈</td></tr>
+        <tr><th>次日</th><td>QR890 多哈 → 上海（约9小时）</td></tr>
+      </table>
+      <p style="margin-top:10px;font-size:13px;color:#666;">⚠️ 格拉纳达机场小型，若无合适航班则乘火车至马德里机场</p>
+    </div>
+  </div>
+</div>
+
+<!-- Hotel -->
+<div class="section" id="hotel">
+  <div class="section-title">🏨 住宿方案（中配推荐）</div>
+  <table class="hotel-table">
+    <thead>
+      <tr><th>城市</th><th>晚数</th><th>推荐区域</th><th>中配参考价/晚</th><th>备注</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>马德里</td><td>3晚</td><td>Gran Vía 附近</td><td>¥1,200-1,500</td><td>四星含早，地铁直达</td></tr>
+      <tr><td>巴塞罗那</td><td>3晚</td><td>Eixample / 哥特区</td><td>¥1,400-1,700</td><td>四星含早，步行高迪作品</td></tr>
+      <tr><td>塞维利亚</td><td>1晚</td><td>老城区</td><td>¥800-1,200</td><td>有阳台更佳</td></tr>
+      <tr><td>格拉纳达</td><td>1晚</td><td>阿尔罕布拉宫附近</td><td>¥700-1,100</td><td>景观加分</td></tr>
+    </tbody>
+  </table>
+  <p style="margin-top:14px;font-size:14px;color:#666;">💡 <strong>8晚住宿中配合计：约¥10,500-13,000</strong>；民宿带厨房可节省餐饮费用</p>
+</div>
+
+<!-- Budget -->
+<div class="section" id="budget">
+  <div class="section-title">💰 最终预算（中配）</div>
+  <table class="budget-table">
+    <thead>
+      <tr><th>类别</th><th>金额（RMB）</th><th>备注</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>国际机票（3人往返）</td><td>¥32,000</td><td>卡塔尔航空，7月旺季含儿童票</td></tr>
+      <tr><td>西班牙签证（3人）</td><td>¥1,950</td><td>约¥650/人，申根签证</td></tr>
+      <tr><td>境内交通</td><td>¥4,500</td><td>高铁+国内航班+大巴</td></tr>
+      <tr><td>住宿（8晚，中配）</td><td>¥12,000</td><td>四星含早</td></tr>
+      <tr><td>餐饮（9天）</td><td>¥5,500</td><td>每天1-2顿餐厅</td></tr>
+      <tr><td>景点门票</td><td>¥2,000</td><td>精选景点，含儿童优惠</td></tr>
+      <tr><td>旅游保险（3人）</td><td>¥600</td><td>全面险，¥200/人</td></tr>
+      <tr><td>电话卡 / Wi-Fi</td><td>¥200</td><td>欧洲通用SIM</td></tr>
+      <tr><td>应急备用金</td><td>¥2,000</td><td>行李寄存、突发状况</td></tr>
+      <tr class="budget-total"><td>总计</td><td>≈ ¥60,750</td><td>人均约 ¥20,250</td></tr>
+    </tbody>
+  </table>
+  <p style="margin-top:16px;font-size:14px;">
+    <strong>低配参考：</strong>约¥40,000-45,000 &nbsp;|&nbsp;
+    <strong>高配参考：</strong>约¥80,000-90,000
+  </p>
+</div>
+
+<!-- Safety -->
+<div class="section" id="safety">
+  <div class="section-title">⚠️ 安全提示（7月夏季）</div>
+  <div class="safety-grid">
+    <div class="safety-card red">
+      <h4>🔴 高温防范（P0级）</h4>
+      <ul>
+        <li>马德里/塞维利亚体感温度可达 40-42°C</li>
+        <li>上午 8-11点户外 → 午休 14-17点室内 → 傍晚 18-20点再出门</li>
+        <li>每小时喝水 200ml，避免咖啡/酒精</li>
+        <li>每2小时补涂 SPF50+ 防晒霜</li>
+      </ul>
+    </div>
+    <div class="safety-card yellow">
+      <h4>🟡 防盗重点</h4>
+      <ul>
+        <li>巴塞罗那兰布拉大道、哥特区小偷活跃</li>
+        <li>手机挂绳 + 背包放胸前</li>
+        <li>"绑绳党"、"鸽子食党"立即拒绝</li>
+        <li>护照放酒店保险箱</li>
+        <li>账单仔细核对后再付款</li>
+      </ul>
+    </div>
+    <div class="safety-card green">
+      <h4>🟢 儿童专属</h4>
+      <ul>
+        <li>儿童防晒 SPF50+（物理防晒更佳）</li>
+        <li>退烧药/拉肚子药/创可贴必带</li>
+        <li>每日备零食和水，体力消耗大</li>
+        <li>时差：西班牙比中国晚 6-7小时</li>
+      </ul>
+    </div>
+  </div>
+
+  <div style="margin-top:20px;">
+    <div class="section-title" style="font-size:15px;">📞 紧急联系电话</div>
+    <table class="ticket-table">
+      <tr><td>🇪🇸 西班牙急救</td><td><strong>112</strong></td></tr>
+      <tr><td>🇪🇸 西班牙报警</td><td><strong>091</strong></td></tr>
+      <tr><td>🇨🇳 驻西班牙大使馆（马德里）</td><td><strong>+34 91 519 42 42</strong></td></tr>
+      <tr><td>🇨🇳 驻巴塞罗那总领馆</td><td><strong>+34 93 204 35 93</strong></td></tr>
+      <tr><td>外交部全球领事保护</td><td><strong>+86-10-12308</strong></td></tr>
+    </table>
+  </div>
+</div>
+
+<!-- Ticket Booking -->
+<div class="section">
+  <div class="section-title">🎫 必提前预约景点</div>
+  <table class="ticket-table">
+    <thead>
+      <tr><th>景点</th><th>预约网站</th><th>提前时间</th><th>备注</th></tr>
+    </thead>
+    <tbody>
+      <tr style="background:#fde8e8 !important;">
+        <td><strong>圣家堂</strong></td>
+        <td>sagradafamilia.org</td>
+        <td style="color:#c8102e;font-weight:700;">❗ 2个月</td>
+        <td>日落时段票体验最佳</td>
+      </tr>
+      <tr style="background:#fde8e8 !important;">
+        <td><strong>阿尔罕布拉宫</strong></td>
+        <td>alhamabra.org</td>
+        <td style="color:#c8102e;font-weight:700;">❗ 2个月</td>
+        <td>纳萨利宫必须按时段进入</td>
+      </tr>
+      <tr>
+        <td>普拉多美术馆</td>
+        <td>museodelprado.es</td>
+        <td>2-3周</td>
+        <td>周日15:00前免费，需预约</td>
+      </tr>
+      <tr>
+        <td>马德里王宫</td>
+        <td>patrimonionacional.es</td>
+        <td>1-2周</td>
+        <td>建议购买语音导览</td>
+      </tr>
+      <tr>
+        <td>塞维利亚王宫</td>
+        <td>alcazarsevilla.org</td>
+        <td>1-2周</td>
+        <td>旺季建议提前</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- Checklist -->
+<div class="section" id="checklist">
+  <div class="section-title">✅ 出发前 Checklist</div>
+  <ul class="checklist">
+    <li class="urgent">护照有效期 ≥ 6个月（申根签证要求）</li>
+    <li class="urgent">申根签证（提前1个月申请，约¥650/人）</li>
+    <li class="urgent">圣家堂门票 — 提前官网预约（必做！）</li>
+    <li class="urgent">阿尔罕布拉宫门票 — 提前2个月预约！</li>
+    <li>境外旅游保险（涵盖医疗 ≥ 30万）</li>
+    <li>欧元现金（每人约 €200-300）</li>
+    <li>手机挂绳 + 防盗腰包</li>
+    <li>防晒装备（SPF50+、宽檐帽、墨镜）</li>
+    <li>儿童常用药（退烧/拉肚子/创可贴）</li>
+    <li>开通信用卡境外消费</li>
+    <li>护照首页/签证页照片存云端</li>
+    <li>中国驻西班牙使领馆电话存手机</li>
+    <li>购买欧洲通用SIM卡或开通国际漫游</li>
+  </ul>
+</div>
+
+<!-- Meta -->
+<div class="section" style="background:#f5f5f5;text-align:center;">
+  <p style="font-size:13px;color:#999;">
+    本报告由 <strong>ClawTeam spain-trip</strong> 多Agent协作生成<br>
+    研究员：transport · attractions · safety · budget · QA审核<br>
+    整合修正：spain-coordinator · 2026年5月3日
+  </p>
+</div>
+
+</div><!-- /container -->
+
+<footer>
+  西班牙亲子游 2026 · ClawTeam Multi-Agent · Generated by 小橘子 🍊
+</footer>
+
+</body>
+</html>
